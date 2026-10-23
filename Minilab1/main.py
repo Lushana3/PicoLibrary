@@ -6,7 +6,7 @@
 
 import time
 from Log import *
-from MysteryGagdet import MysteryGadget, MysteryGagdet
+from MysteryGagdet import MysteryGadget
 
 def main():
     """
@@ -78,7 +78,7 @@ def main():
 
     # 3. Control for about 10 seconds (monitoring potentiometer input)
     Log.i("main.py: Controlling MysteryGadget for approximately 10 seconds...")
-    gadget.control(duration=10.0, delay=0.2)
+    gadget.control(duration=60.0, delay=0.2)
 
     # 4. Stop the MysteryGadget
     Log.i("main.py: Stopping MysteryGadget...")
