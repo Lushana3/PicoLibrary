@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 874.2 1240" width="874.2" height="1240" style="--bg:#1F1F1F;--fg:#CCCCCC;--line:#CCCCCC;--accent:#0078D4;--muted:#CCCCCCCC;--surface:#181818;--border:#CCCCCC;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  .mono { font-family: 'JetBrains Mono', 'SF Mono', 'Fira Code', ui-monospace, monospace; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="cls-inherit" markerWidth="12" markerHeight="10" refX="12" refY="5" orient="auto-start-reverse">
+    <polygon points="0 0, 12 5, 0 10" fill="var(--bg)" stroke="var(--_arrow)" stroke-width="1.5" />
+  </marker>
+  <marker id="cls-composition" markerWidth="12" markerHeight="10" refX="0" refY="5" orient="auto-start-reverse">
+    <polygon points="6 0, 12 5, 6 10, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="1" />
+  </marker>
+  <marker id="cls-aggregation" markerWidth="12" markerHeight="10" refX="0" refY="5" orient="auto-start-reverse">
+    <polygon points="6 0, 12 5, 6 10, 0 5" fill="var(--bg)" stroke="var(--_arrow)" stroke-width="1.5" />
+  </marker>
+  <marker id="cls-arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto-start-reverse">
+    <polyline points="0 0, 8 3, 0 6" fill="none" stroke="var(--_arrow)" stroke-width="1.5" />
+  </marker>
+</defs>
+<polyline class="class-relationship" data-from="Buzzer" data-to="PassiveBuzzer" data-type="inheritance" data-marker-at="from" points="120.6,188 120.6,248" fill="none" stroke="var(--_line)" stroke-width="1" marker-start="url(#cls-inherit)" />
+<polyline class="class-relationship" data-from="Light" data-to="LightStrip" data-type="inheritance" data-marker-at="from" points="687.5999999999999,248 687.6,308" fill="none" stroke="var(--_line)" stroke-width="1" marker-start="url(#cls-inherit)" />
+<polyline class="class-relationship" data-from="Sensor" data-to="AnalogSensor" data-type="inheritance" data-marker-at="from" points="249.29999999999998,764 249.29999999999998,824" fill="none" stroke="var(--_line)" stroke-width="1" marker-start="url(#cls-inherit)" />
+<polyline class="class-relationship" data-from="AnalogSensor" data-to="Thermistor" data-type="inheritance" data-marker-at="from" points="249.29999999999998,952 249.29999999999998,1012" fill="none" stroke="var(--_line)" stroke-width="1" marker-start="url(#cls-inherit)" />
+<polyline class="class-relationship" data-from="Display" data-to="LCDDisplay" data-type="inheritance" data-marker-at="from" points="371.1,188 371.1,248" fill="none" stroke="var(--_line)" stroke-width="1" marker-start="url(#cls-inherit)" />
+<g class="class-node" data-id="Buzzer" data-label="Buzzer">
+  <rect x="40" y="40" width="161.2" height="148" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="40" y="40" width="161.2" height="32" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="120.6" y="56" text-anchor="middle" font-size="13" font-weight="700" fill="var(--_text)" dy="4.55">Buzzer</text>
+  <line x1="40" y1="72" x2="201.2" y2="72" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="48" y="86" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">- </tspan><tspan fill="var(--_text-sec)">_name</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">str</tspan></text>
+  <line x1="40" y1="100" x2="201.2" y2="100" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="48" y="114" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">__init__(pin, name)</tspan></text>
+  <text x="48" y="134" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">beep(tone, duration)</tspan></text>
+  <text x="48" y="154" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">play(tone)</tspan></text>
+  <text x="48" y="174" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">stop()</tspan></text>
+</g>
+<g class="class-node" data-id="PassiveBuzzer" data-label="PassiveBuzzer">
+  <rect x="43.3" y="248" width="154.6" height="188" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="43.3" y="248" width="154.6" height="32" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="120.6" y="264" text-anchor="middle" font-size="13" font-weight="700" fill="var(--_text)" dy="4.55">PassiveBuzzer</text>
+  <line x1="43.3" y1="280" x2="197.89999999999998" y2="280" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="51.3" y="294" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">MAX</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">int</tspan></text>
+  <text x="51.3" y="314" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">- </tspan><tspan fill="var(--_text-sec)">_volume</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">float</tspan></text>
+  <text x="51.3" y="334" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">- </tspan><tspan fill="var(--_text-sec)">_playing</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">bool</tspan></text>
+  <line x1="43.3" y1="348" x2="197.89999999999998" y2="348" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="51.3" y="362" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">__init__(pin, name)</tspan></text>
+  <text x="51.3" y="382" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">play(tone)</tspan></text>
+  <text x="51.3" y="402" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">stop()</tspan></text>
+  <text x="51.3" y="422" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">setVolume(volume)</tspan></text>
+</g>
+<g class="class-node" data-id="Light" data-label="Light">
+  <rect x="610.3" y="40" width="154.6" height="208" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="610.3" y="40" width="154.6" height="32" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="687.5999999999999" y="56" text-anchor="middle" font-size="13" font-weight="700" fill="var(--_text)" dy="4.55">Light</text>
+  <line x1="610.3" y1="72" x2="764.9" y2="72" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="618.3" y="86" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">- </tspan><tspan fill="var(--_text-sec)">_name</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">str</tspan></text>
+  <text x="618.3" y="106" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">- </tspan><tspan fill="var(--_text-sec)">_pin</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">int</tspan></text>
+  <line x1="610.3" y1="120" x2="764.9" y2="120" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="618.3" y="134" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">__init__(pin, name)</tspan></text>
+  <text x="618.3" y="154" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">on()</tspan></text>
+  <text x="618.3" y="174" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">off()</tspan></text>
+  <text x="618.3" y="194" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">flip()</tspan></text>
+  <text x="618.3" y="214" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">blink(delay, times)</tspan></text>
+  <text x="618.3" y="234" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">isOn()</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">bool</tspan></text>
+</g>
+<g class="class-node" data-id="LightStrip" data-label="LightStrip">
+  <rect x="541" y="308" width="293.2" height="288" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="541" y="308" width="293.2" height="32" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="687.6" y="324" text-anchor="middle" font-size="13" font-weight="700" fill="var(--_text)" dy="4.55">LightStrip</text>
+  <line x1="541" y1="340" x2="834.2" y2="340" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="549" y="354" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">FILLS</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">int</tspan></text>
+  <text x="549" y="374" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">CHASES</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">int</tspan></text>
+  <text x="549" y="394" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">RAINBOW</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">int</tspan></text>
+  <text x="549" y="414" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">- </tspan><tspan fill="var(--_text-sec)">_numleds</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">int</tspan></text>
+  <text x="549" y="434" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">- </tspan><tspan fill="var(--_text-sec)">_brightness</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">float</tspan></text>
+  <line x1="541" y1="448" x2="834.2" y2="448" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="549" y="462" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">__init__(pin, name, numleds, brightness)</tspan></text>
+  <text x="549" y="482" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">on()</tspan></text>
+  <text x="549" y="502" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">off()</tspan></text>
+  <text x="549" y="522" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">setColor(color, numPixels)</tspan></text>
+  <text x="549" y="542" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">setPixel(pixelno, color, show)</tspan></text>
+  <text x="549" y="562" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">setBrightness(brightness)</tspan></text>
+  <text x="549" y="582" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">run(runtype)</tspan></text>
+</g>
+<g class="class-node" data-id="Sensor" data-label="Sensor">
+  <rect x="152.2" y="616" width="194.2" height="148" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="152.2" y="616" width="194.2" height="32" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="249.29999999999998" y="632" text-anchor="middle" font-size="13" font-weight="700" fill="var(--_text)" dy="4.55">Sensor</text>
+  <line x1="152.2" y1="648" x2="346.4" y2="648" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="160.2" y="662" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">- </tspan><tspan fill="var(--_text-sec)">_name</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">str</tspan></text>
+  <text x="160.2" y="682" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">- </tspan><tspan fill="var(--_text-sec)">_lowActive</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">bool</tspan></text>
+  <line x1="152.2" y1="696" x2="346.4" y2="696" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="160.2" y="710" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">__init__(name, lowActive)</tspan></text>
+  <text x="160.2" y="730" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">rawValue()</tspan></text>
+  <text x="160.2" y="750" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">tripped()</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">bool</tspan></text>
+</g>
+<g class="class-node" data-id="AnalogSensor" data-label="AnalogSensor">
+  <rect x="99.39999999999998" y="824" width="299.8" height="128" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="99.39999999999998" y="824" width="299.8" height="32" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="249.29999999999998" y="840" text-anchor="middle" font-size="13" font-weight="700" fill="var(--_text)" dy="4.55">AnalogSensor</text>
+  <line x1="99.39999999999998" y1="856" x2="399.2" y2="856" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="107.39999999999998" y="870" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">- </tspan><tspan fill="var(--_text-sec)">_threshold</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">int</tspan></text>
+  <line x1="99.39999999999998" y1="884" x2="399.2" y2="884" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="107.39999999999998" y="898" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">__init__(pin, name, lowActive, threshold)</tspan></text>
+  <text x="107.39999999999998" y="918" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">rawValue()</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">int</tspan></text>
+  <text x="107.39999999999998" y="938" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">tripped()</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">bool</tspan></text>
+</g>
+<g class="class-node" data-id="Thermistor" data-label="Thermistor">
+  <rect x="40" y="1012" width="418.59999999999997" height="188" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="40" y="1012" width="418.59999999999997" height="32" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="249.29999999999998" y="1028" text-anchor="middle" font-size="13" font-weight="700" fill="var(--_text)" dy="4.55">Thermistor</text>
+  <line x1="40" y1="1044" x2="458.59999999999997" y2="1044" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="48" y="1058" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">vd</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">float</tspan></text>
+  <text x="48" y="1078" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">rt</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">float</tspan></text>
+  <text x="48" y="1098" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">rp</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">float</tspan></text>
+  <text x="48" y="1118" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">beta</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">int</tspan></text>
+  <line x1="40" y1="1132" x2="458.59999999999997" y2="1132" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="48" y="1146" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">__init__(pin, name, lowActive, threshold, Vd, Rp, Rt, beta)</tspan></text>
+  <text x="48" y="1166" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">rawValue()</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">float</tspan></text>
+  <text x="48" y="1186" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">temperature(unit)</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">float</tspan></text>
+</g>
+<g class="class-node" data-id="Display" data-label="Display">
+  <rect x="293.8" y="40" width="154.6" height="148" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="293.8" y="40" width="154.6" height="32" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="371.1" y="56" text-anchor="middle" font-size="13" font-weight="700" fill="var(--_text)" dy="4.55">Display</text>
+  <line x1="293.8" y1="72" x2="448.4" y2="72" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <line x1="293.8" y1="80" x2="448.4" y2="80" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="301.8" y="94" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">reset()</tspan></text>
+  <text x="301.8" y="114" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">clear()</tspan></text>
+  <text x="301.8" y="134" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">showNumber(number)</tspan></text>
+  <text x="301.8" y="154" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">showText(text)</tspan></text>
+  <text x="301.8" y="174" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">scroll(text, speed)</tspan></text>
+</g>
+<g class="class-node" data-id="LCDDisplay" data-label="LCDDisplay">
+  <rect x="221.2" y="248" width="299.8" height="188" rx="0" ry="0" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <rect x="221.2" y="248" width="299.8" height="32" rx="0" ry="0" fill="var(--_group-hdr)" stroke="var(--_node-stroke)" stroke-width="1" />
+  <text x="371.1" y="264" text-anchor="middle" font-size="13" font-weight="700" fill="var(--_text)" dy="4.55">LCDDisplay</text>
+  <line x1="221.2" y1="280" x2="521" y2="280" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="229.2" y="294" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">- </tspan><tspan fill="var(--_text-sec)">_working</tspan><tspan fill="var(--_text-faint)">: </tspan><tspan fill="var(--_text-muted)">bool</tspan></text>
+  <line x1="221.2" y1="308" x2="521" y2="308" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="229.2" y="322" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">__init__(rs, e, d4, d5, d6, d7, sda, scl)</tspan></text>
+  <text x="229.2" y="342" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">clear(line)</tspan></text>
+  <text x="229.2" y="362" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">showNumber(number, row, col)</tspan></text>
+  <text x="229.2" y="382" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">showText(text, row, col)</tspan></text>
+  <text x="229.2" y="402" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">addShape(position, shapearray)</tspan></text>
+  <text x="229.2" y="422" class="mono" dy="0.35em" font-size="11" font-weight="400"><tspan fill="var(--_text-faint)">+ </tspan><tspan fill="var(--_text-sec)">scroll(text, row, speed, skip)</tspan></text>
+</g>
+
+
+
+
+
+</svg>
