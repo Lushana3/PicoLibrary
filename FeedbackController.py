@@ -266,7 +266,8 @@ class FeedbackController:
 
     def showScore(self):
         """
-        Illuminate the NeoPixel light strip according to current satisfaction score.
+        Illuminate the NeoPixel light strip according to current satisfaction score
+        and display the score on the LCD.
 
         Scales the 0-100% score to 0-8 LEDs. Color indicates overall satisfaction level:
         - >= 70%: Green
@@ -285,6 +286,10 @@ class FeedbackController:
             color = RED
 
         self.lights.setColor(color, level)
+
+        self.display.clear()
+        self.display.showText("Thanks for vote!", 0, 0)
+        self.display.showText(f"Score: {round(pct)}%", 1, 0)
 
     # -------------------------------------------------------------------------
     # Audio, Light, and Alarm Methods
