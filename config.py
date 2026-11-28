@@ -7,7 +7,7 @@
 # WiFi settings
 # On real hardware use your phone hotspot. On the Wokwi simulator use 'Wokwi-GUEST' and ''.
 WIFI_SSID = 'apt_502_2ghz'
-WIFI_PASSWORD = 'mtnsjjyffi'
+WIFI_PASSWORD = ''
 
 # REST web service base URL (swap ism6205 for ism6106 if one server is down)
 BASE_URL = 'https://iacademy.oracle.com/ords/ism6205/customer'
