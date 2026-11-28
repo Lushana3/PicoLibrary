@@ -1,19 +1,24 @@
 """
 # main.py
-# Main execution entrypoint for Lab 3 Feedback Kiosk on Raspberry Pi Pico W / Wokwi.
+# Entry point for Lab 4 IoT CRM device (Raspberry Pi Pico 2W / Wokwi).
+# Set LOAD_MODE in config.py to 'A' or 'B' to choose the sequence.
 # Author: Lushana3
 """
 
-from FeedbackController import FeedbackController
 from Log import *
+from CRMController import CRMController
+
+# Hide the PicoLibrary's chatty info logs so the console shows only the
+# sequence trace (the lines that match the sequence diagram).
+Log.level = ERROR
+
 
 def main():
-    """
-    Instantiate FeedbackController and execute the feedback kiosk state machine.
-    """
-    Log.i("main.py: Starting Feedback Kiosk System...")
-    controller = FeedbackController()
-    controller.run()
+    controller = CRMController()
+    try:
+        controller.run()
+    except KeyboardInterrupt:
+        controller.stop()
 
 
 if __name__ == "__main__":
